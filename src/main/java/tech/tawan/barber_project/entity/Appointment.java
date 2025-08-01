@@ -13,16 +13,17 @@ public class Appointment {
 
     private String date;
 
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
 
-    @ManyToMany
-    @JoinTable(
-            name = "appointment_treatments",
-            joinColumns = @JoinColumn(name = "appointment_id"),
-            inverseJoinColumns = @JoinColumn(name = "treatment_id")
-    )
-    private List<Treatment> treatments;
+    @ManyToOne
+    @JoinColumn(name = "barber_shop_id")
+    private BarberShop barberShop;
+
+    @ManyToOne
+    @JoinColumn(name = "treatment_id")
+    private Treatment treatment;
 }

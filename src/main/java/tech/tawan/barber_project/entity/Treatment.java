@@ -35,7 +35,7 @@ public class Treatment {
     // é a chave estrangeira que referencia a tabela user
     // e que o relacionamento é do tipo many to one, ou seja, muitos tratamentos podem
     // ser criados por um único usuário (createBy)
-   @ManyToOne
-   @JoinColumn(name = "user_id")
-   private User createdBy;
+    @ManyToOne
+    @JoinColumn(name = "barber_shop_id")
+    private BarberShop barberShop;
 }

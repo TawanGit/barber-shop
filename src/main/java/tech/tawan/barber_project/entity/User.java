@@ -32,10 +32,6 @@ public class User {
     @Column
     private String cellphone;
 
-    // um usuario pode ter muitos tratamentos
-    // eu coloco o mappedby pra falar que eu quero ver as informações que criei
-    @OneToMany(mappedBy = "createdBy")
-    private List<Treatment> treatments;
 
     @OneToMany(mappedBy = "user")
     private List<Appointment> appointments;
