@@ -1,9 +1,15 @@
 package tech.tawan.barber_project.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import tech.tawan.barber_project.enums.CategoryEnum;
 
 @Entity
+@NoArgsConstructor
+@Getter
+@Setter
 public class Treatment {
 
     @Id
